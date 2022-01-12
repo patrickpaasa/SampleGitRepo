@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <title>Sample Git Repo</title>
+    
 </head>
 <body>
-    <h1>Git Repo Example</h1>
-    <h2>Computer Studies</h2>
+    <h1 class="bg-danger" id="hone">Git Repo Example
+        <button class="btn btn-success btn-sm">Submit</button>
+    </h1>
+    <h2  class="bg-danger" >Computer Studies</h2>
     <h3>IT Elective 4 - Frameworks</h3>
+    <script>
+        let hone = document.getElementById("hone");
+        hone.innerHTML = "Change";
+        console.log(hone);
+        console.log("Hello");
+    </script>
 </body>
 </html>
