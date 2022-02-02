@@ -1,12 +1,26 @@
-console.log("Hello World");
-let number = 123;
-console.log(number);
-number = "123123";
-console.log(number);
+var express = require('express');
+var app = express();
 
-number = false;
 
-console.log(number, addMe());
-function addMe(){
-    return 123 + 123;
-}
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+    let data = {
+        url: req.url,
+    }
+    res.render('pages/index', data);
+});
+
+app.get('/about', function (req, res) {
+    let data = {
+        url: req.url,
+        array: [
+            { fname: "Dodong", lname: "Laboriki" }
+        ],
+    }
+    res.render('pages/about', data);
+});
+
+
+
+app.listen(8080);
