@@ -11,13 +11,41 @@
     </header>
     <main class="container">
         <div class="card border-secondary mb-3" style="max-width: 20rem;">
-            <div class="card-header">About <%= array %>
+            <div class="card-header">About <%= array[0].fname %>
             </div>
             <div class="card-body">
-                <h4 class="card-title">Primary card title</h4>
+                <h4 class="card-title">
+                </h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
             </div>
+            
+        </div>
+        <br/>
+        <div class="d-flex flex-wrap">
+            <% for(index = 0; index < items.length; index++){ %>
+                <div class="col-3 card border-secondary m-1" style="max-width: 20rem;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <h4> <a href="/item/<%= items[index].id %>"> <%= items[index].name %> </a></h4>
+                        <h4 class="card-title">₱ <%= items[index].price %></h4>
+                        <p class="card-text"></p>
+                    </div>
+                    
+                </div>
+            <% } %>
+        </div>
+        <div class="card border-secondary mb-3 col-7" >
+            <div class="card-header"> <h3><%= panahon[0].location.name %></h3>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= panahon[0].current.temperature %>° <%= panahon[0].location.degreetype %>
+                </h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+            
         </div>
     </main>
     <footer>
