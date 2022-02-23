@@ -19,6 +19,7 @@
   "homepage": "https://github.com/patrickpaasa/SampleGitRepo#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2"
   }
 }
